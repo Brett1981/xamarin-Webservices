@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Search">
+ <StackLayout>
+   <Entry x:Name="TxtSearch" Placeholder="searchbykeyword"/>
+   <Button x:Name="ButtonSearch" Clicked="ButtonSearch_OnClicked"/>
+    <ListView x:Name="Mainlistview">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell >
+            <StackLayout BackgroundColor="White">
+              <Label TextColor="Black" Text="{Binding Name}" BackgroundColor="White"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page1">
+  <StackLayout>
+    <StackLayout>
+      <Entry x:Name="txtname1" Placeholder="Name" />
+      <Button x:Name="ButtonPost" Text="Post" BackgroundColor="Blue" Clicked="ButtonPost_OnClicked" />
+    </StackLayout>
+
+    <StackLayout>
+      <Entry x:Name="txtId2" Placeholder="DepartementId" />
+      <Entry x:Name="txtname2" Placeholder="Name" />
+      <Button x:Name="ButtonPut" Text="Put" BackgroundColor="Green" Clicked="ButtonPut_OnClicked" />
+    </StackLayout>
+
+
+    <StackLayout>
+      <Entry x:Name="txtId3" Placeholder="DepartementId" />
+      <Button x:Name="ButtonDelete" Text="Delete" BackgroundColor="Teal" Clicked="ButtonDelete_OnClicked" />
+    </StackLayout>
+
+    <StackLayout>
+      <ListView x:Name="Mainlistview">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell >
+              <StackLayout BackgroundColor="White">
+                <Label TextColor="Black" Text="{Binding DepartementId}" BackgroundColor="White"/>
+                <Label TextColor="Black" Text="{Binding Name}" BackgroundColor="White"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Button x:Name="ButtonGet" Text="Get" BackgroundColor="Olive" Clicked="ButtonGet_OnClicked" />
+    </StackLayout>
+
+  </StackLayout>
+</ContentPage>
